@@ -29,12 +29,10 @@ myapp.service('employeeService', function ($http, $location) {
 
     //delete record
     this.delete = function (UpdateEmpNo) {
-
         var deleterequest = $http({
             method: 'post',
             url: '/Home/Delete/' + UpdateEmpNo
         });
-
         return deleterequest;
 
         //return $http.post('/Home/Delete/' + UpdateEmpNo);

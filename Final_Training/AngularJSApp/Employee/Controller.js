@@ -30,6 +30,7 @@ myapp.controller('employee-controller', function ($scope, employeeService, $loca
             DeptName: $scope.DeptName,
             Designation: $scope.Designation
         };
+
         var saverecords = employeeService.save(Employee);
         saverecords.then(function (d) {
             if (d.data.success === true) {
@@ -122,7 +123,7 @@ myapp.controller('employee-controller', function ($scope, employeeService, $loca
             if (d.data.success === true) {
                 loadEmployees();
                 //$window.location.path = ('/Home/About');
-                alert("Employee deleted succussfully");
+                alert("Employee deleted successfully");
                 $scope.$broadcast('show-errors-reset');
             }
             else {
